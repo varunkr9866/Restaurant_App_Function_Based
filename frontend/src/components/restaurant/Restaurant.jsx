@@ -29,11 +29,5 @@ function Restaurant(props) {
     </div>
   );
 
-  let arr = ["balaji", "semma", "kishan"];
-  return (
-    <div>
-      <h1>{arr}</h1>
-    </div>
-  );
 }
 export default Restaurant;
