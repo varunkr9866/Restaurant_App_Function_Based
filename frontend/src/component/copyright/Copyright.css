@@ -1,0 +1,17 @@
+h4{
+    text-align: center;
+}
+
+footer {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+h4.copyright {
+    width: 100%;
+    color: rgb(5, 0, 0);
+    line-height: 40px;
+    text-align: center;
+    bottom:0;
+}
