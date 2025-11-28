@@ -1,10 +1,10 @@
 function Login(params) {
     function handleSubmit(event){
         event.preventDefault();
-        console.log(event.target);
-        console.log(event.target.username);
-        console.log(event.target.username.value);
-        
+        let user ={
+        username : event.target.username.value;
+        password : event.target.password.value;
+        }
     }
     return(
         <div>
