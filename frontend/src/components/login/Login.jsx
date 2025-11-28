@@ -15,7 +15,11 @@ function Login(params) {
         let response = await fetch(backend_url,options);
         console.log(response);
         let responseData = await response.json();
-        console.log(responseData);
+        if(responseData.flag === true){
+            NavigationHistoryEntry('/restaurant')
+        }else{
+            alert(responseData.msg)
+        }
         
         
     }

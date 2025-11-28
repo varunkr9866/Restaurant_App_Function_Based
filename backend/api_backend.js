@@ -17,6 +17,26 @@ app.post('/login',(req,res)=>{
     }
 });
 
+let foodData = [
+    {foodName:'French Fries', price:'Rs.250/-',catogory:'veg'},
+    {foodName:'Tandoori Mushrooms', price:'Rs.450/-',catogory:'veg'},
+    {foodName:'Chicken Alabu', price:'Rs.550/-',catogory:'non-veg'},
+    {foodName:'Dragon Prawns', price:'Rs.650/-',catogory:'non-veg'}
+]
+
+let drinkData = [
+    {drinkData:'Virgin Mojito', price:'Rs.250/-',catogory:'mocktail'},
+    {drinkData:'Pinacolada', price:'Rs.350/-',catogory:'mocktail'},
+    {drinkData:'Sex on the Beach', price:'Rs.550/-',catogory:'cocktail'},
+    {drinkData:'Moscow Mule', price:'Rs.650/-',catogory:'cocktail'}
+]
+
+let data =[foodData,drinkData];
+
+app.get('/data',(req,res)=>{
+    res.json(data);
+})
+
 app.listen(3200,()=>{
     console.log("Backend Application Is connected at 3200 port");
     
