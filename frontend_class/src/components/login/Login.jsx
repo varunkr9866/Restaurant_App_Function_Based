@@ -1,5 +1,5 @@
-import React, { COmponent } from "react";
-import "./Demo.css";
+import React, { Component } from "react";
+import "./Login.css";
 
 class Login extends Component {
   constructor(props) {
@@ -32,18 +32,22 @@ class Login extends Component {
               </div>
             </form>
           </div>
-          <Copyright />
+          {/* <Copyright /> */}
         </div>
       </div>
     );
   }
   
-  handleSubmit(){
+  handleSubmit(event){
+    event.preventDefault();
+    console.log(event.target);
+    console.log(event.target.username);
+    console.log(event.target.username.value);
     
   }
-  componentDidMount(){
+  // componentDidMount(){
     
-  }
+  // }
 }
 
 export default Login;
