@@ -1,0 +1,41 @@
+1-class name should be same as component file name in pascal case
+
+2-folder name in small letters component name 
+
+3-class should have a default constructor passing super props 
+
+4-useState hook should be replaced by a single state variable inside constructor
+
+5-event listener methods (helper functions) should be declared inside the class as methods and this method should be bind with this object
+
+6-jsx should be written inside a render method
+
+7-useEffect hook logic should be written in componentDidMount() or componentDidUpdate() where ever neccessary
+
+8-use navigate hook logic should be changed 
+
+// withNavigate.js
+import { useNavigate } from "react-router-dom";
+
+export default function withNavigate(Component) {
+  return function WithNavigate(props) {
+    const navigate = useNavigate();
+    return <Component {...props} navigate={navigate} />;
+  };
+}
+
+Inside Login.jsx
+
+import withNavigate from "../path/to/withNavigate";
+
+class Login extends React.Component {
+  handleSubmit = () => {
+    this.props.navigate("/restaurant");   // works like useNavigate
+  };
+
+  render() {
+    return (...);
+  }
+}
+
+export default withNavigate(Login);
