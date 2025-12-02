@@ -2,10 +2,12 @@ import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { Component } from 'react';
 
 
 export default class NavigationBar extends Component {
   constructor(props) {
+    super(props);
     
   }
  render() {
@@ -14,7 +16,7 @@ export default class NavigationBar extends Component {
             <Container>
                 <Navbar.Brand>Varun's Kitchen</Navbar.Brand>
                 <Nav className="me-auto">
-                    <Nav.Link href="/">Login</Nav.Link>
+                    <Nav.Link href="/login">Login</Nav.Link>
                     <Nav.Link href="/restaurant">Restaurant</Nav.Link>
                 </Nav>
             </Container>

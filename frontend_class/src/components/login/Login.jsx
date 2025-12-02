@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import "./Login.css";
+import withRouter from "./withRouter.jsx";
+import Copyright from "../copyright/Copyright.jsx";
+
 
 class Login extends Component {
   constructor(props) {
@@ -32,7 +35,7 @@ class Login extends Component {
               </div>
             </form>
           </div>
-          {/* <Copyright /> */}
+          <Copyright />
         </div>
       </div>
     );
@@ -45,9 +48,6 @@ class Login extends Component {
     console.log(event.target.username.value);
     
   }
-  // componentDidMount(){
-    
-  // }
 }
 
 export default Login;
